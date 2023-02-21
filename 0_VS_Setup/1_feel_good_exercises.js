@@ -96,7 +96,7 @@ catchMeIfYouCan3 = 'You did catch me!';
 // there is a shortcut for that: Alt-ArrowUp/Down. for Mac, it's option not Alt
 
 // Order the lines below accordingly.
-console.log('1. I would like to go above.'); 
+console.log('1. I would like to go above.');
 console.log('2. I would like to go below.');
 
 // Great! To learn more about key bindings, see:
@@ -121,10 +121,10 @@ console.log('2. I would like to go below.');
 
 let a = 1234;
 a++;
- if(a> 123) {
+if (a > 123) {
     a--;
 }
-else    a++
+else a++
 console.log(a);
 
 // Nothing happened? 
@@ -150,7 +150,7 @@ console.log(a);
 // if statement (it is the last parenthesis). Does the opening curly 
 // bracket get highlighted?
 
-if ((b+c) > 1) {
+if ((b + c) > 1) {
     console.log("Hei!");
 }
 
