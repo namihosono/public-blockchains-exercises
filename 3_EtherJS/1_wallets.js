@@ -137,17 +137,17 @@ exercise = '3a';
 
 // Your code here!
 
-if (process.env.METAMASK_ACCOUNT_1 == "") {
+// if (process.env.METAMASK_ACCOUNT_1 == "") {
 
-    console.log("Variable missing")
-}
+//     console.log("Variable missing")
+// }
 
-else {
+// else {
 
-    console.log("Variable is there")
-}
+//     console.log("Variable is there")
+// }
 
-exit();
+// exit();
 
 // b. Create an array with all the names of the variables written in the .env
 // file. Then print the lenght of the array.
@@ -157,7 +157,11 @@ exercise = '3b';
 
 // Your code here!
 
+let arr = ["INFURA_KEY", "INFURA_GOERLI_API_URL", "INFURA_MAINNET_API_URL", "ALCHEMY_KEY", 
+"ALCHEMY_GOERLI_API_URL", "ALCHEMY_MAINNET_API_URL", "METAMASK_1_ADDRESS", "METAMASK_1_PRIVATE_KEY", 
+"METAMASK_2_ADDRESS", "METAMASK_2_PRIVATE_KEY", "ETHERSCAN_KEY"];
 
+console.log( arr.length );
 
 // exit();
 
@@ -170,27 +174,55 @@ exercise = '3b';
 
 
 // Solution 1. forEach.
-variablesToCheck.forEach(v => {
-    // Your code here!
-});
+// variablesToCheck.forEach(v => {
+    
+//     // Your code here!
+//     if (!process.env[v]) {
+//         console.log(process.env[v])
+//         console.log('Missing ${v}, fix your .env file')
+//     }
+    
+
+// });
 
 // Solution 2. For-loop.
+
+for(let index = 0; index < arr.length; index++ ){
+
+    const v = arr[index];
+    if (!process.env[v]) {
+        console.log(process.env[v])
+        console.log('Missing ${v}, fix your .env file')
+    } 
+    // else {
+    //     console.log("success!")
+    // }
+
+}
 
 // Your code here!
 
 
-// exit();
+//exit();
 
 
 // Exercise 4. Create a Random Wallet.
 //////////////////////////////////////
 exercise = '4a';
 
-const ethers = require("ethers");
+const ethers = require("ethers"); //error canot find module
 
 // a. Create a random wallet and print the address, the private key,
 // and the mnenomic phrase.
 // Hint: ethers.Wallet.createRandom();
+
+const wallet = ethers.Wallet.createRandom();
+
+console.log();
+console.log("Address: " + wallet.address)+
+console.log("Private key: " + wallet.privateKey);
+console.log("Mnenomic phrase: " + wallet.mnenomic.phrase);
+console.log();
 
 
 // exit();

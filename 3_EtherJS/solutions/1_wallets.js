@@ -199,7 +199,7 @@ for (let index = 0; index < variablesToCheck.length; index++) {
 //////////////////////////////////////
 exercise = '4a';
 
-const ethers = require("ethers");
+const ethers = require("ethers"); 
 
 // a. Create a random wallet and print the address, the private key,
 // and the mnenomic phrase.
