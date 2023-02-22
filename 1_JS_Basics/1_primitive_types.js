@@ -111,7 +111,7 @@ console.log(c);
 
 // d. Take the integer part of the float number 2.123456789 (need to use Math).
 
-d = Math.int
+d = Math.trunc(2.123456789);
 
 console.log(d);
 
@@ -150,10 +150,14 @@ console.log(luzernPopulation);
 // in a variable (and pick a proper name for the variable!).
 // Hint. The Math object is your friend.
 
+random = Math.random();
+console.log(random);
 
 // b. Update the variable so that the value of the random number is
 // between 0 and the one hundred thoudands.
 
+random = random * 100000;
+console.log(random);
 
 // EXERCISE 4. Conditionals.
 ////////////////////////////
@@ -166,6 +170,14 @@ console.log(luzernPopulation);
 // otherwise print "Few but good!"
 // Hint: Use console.log to print.
 
+if (random < luzernPopulation) {
+    console.log("Few but good!");
+}
+else if (random == luzernPopulation) {
+    console.log("Are we in the Matrix?");
+} else {
+    console.log("Go Luzern!");
+}
 
 // EXERCISE 5. String manipulation.
 ///////////////////////////////////
@@ -175,10 +187,13 @@ console.log(luzernPopulation);
 str1 = "Always remember that you are absolutely unique.";
 str2 = 'Just like everyone else.';
 
+finalStr = str1 + " " + str2;
+
 
 // b. Did you remember to add a space between them?
 // If so, how many characters is the final string?
 
+console.log(finalStr.length);
 
 // c. Did you know that you can also join strings and numbers together?
 // Replace str2 with a new sentence that includes the total population count
@@ -187,6 +202,8 @@ str2 = 'Just like everyone else.';
 // Then, join it with str1 and update finalStr.
 // Important. String must end with a dot (needed for exercise below).
 
+str2 = "Just like other " + luzernPopulation + " persons in Luzern.";
+finalStr = str1 + " " + str2;
 
 // d. Alternatively, you can specify strings using the backtick sign `
 // which allows for in-string variable substitution.
