@@ -93,17 +93,25 @@ console.log(typeof undefined);
 
 // a. Compute (18 + 107) / (5 * 25)
 
+a = (18 + 107) / (5 * 25)
+
 console.log(a);
 
 // b. Compute the square root of one million.
+
+b = 1000000 ** (1/2);
 
 console.log(b);
 
 // c. Take the remainder of the division betwen 123 and 9 squared, minus 1.
 
+c = 123 % ((9 ** (1/2)) -1);
+
 console.log(c);
 
 // d. Take the integer part of the float number 2.123456789 (need to use Math).
+
+d = Math.int
 
 console.log(d);
 
