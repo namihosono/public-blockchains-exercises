@@ -230,7 +230,7 @@ console.log();
 // b. Bonus. Print the derivation path of the wallet and check that it is
 // equal to `baseDevPath`. 
 
-exercise = '4b';
+exercise = '4b';  
 
 let baseDevPath = "m/44'/60'/0'/0/";
 
