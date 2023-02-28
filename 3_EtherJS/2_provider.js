@@ -14,6 +14,8 @@
 
 // Your code here!
 
+require('dotenv').config();
+const ethers = require("ethers");
 
 // Exercise 1. Connect to Mainnet (a.k.a welcome async!).
 /////////////////////////////////////////////////////////
@@ -43,6 +45,11 @@
 
 
 // Your code here!
+
+const providerKey = process.env.INFURA_KEY;
+const mainnetInfuraUrl = `${process.env.INFURA_MAINNET_API_URL}${providerKey}`;
+console.log(mainnetInfuraUrl);
+const mainnetProvider = new ethers.JsonRpcProvider(mainnetInfuraUrl);
 
 
 // b. Verify that the network's name is "mainnet" and the chain id that theis 1.
